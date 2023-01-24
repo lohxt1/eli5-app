@@ -8,9 +8,7 @@ import LoadingDots from "../shared/icons/loadingDots";
 const HeaderIsland: React.FC = () => {
   const { data: session, status } = useSession();
 
-  const [darkMode, toggleDarkMode] = useState(true);
-
-  console.log(status);
+  const [darkMode, toggleDarkMode] = useState(false);
 
   const _handleClick = (e) => {
     e.preventDefault();
@@ -30,8 +28,8 @@ const HeaderIsland: React.FC = () => {
     <nav
       className={cn(
         "flex w-full justify-center",
-        "mb-5 px-5 py-5",
-        // "border-b border-slate-900",
+        "px-5 py-5",
+        "border-b border-cyan-600",
       )}
     >
       <div
@@ -70,7 +68,7 @@ const HeaderIsland: React.FC = () => {
             aria-label="Toggle Dark Mode"
             type="button"
             className={cn(
-              "flex h-9 w-9 items-center justify-center",
+              "flex h-9 w-9 items-center justify-end",
               // "bg-gray-200",
               "rounded-lg",
               "transition-all",
@@ -86,9 +84,9 @@ const HeaderIsland: React.FC = () => {
                 className="h-5 w-5 text-gray-800"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
                 ></path>
               </svg>
@@ -101,9 +99,9 @@ const HeaderIsland: React.FC = () => {
                 className="h-5 w-5 text-gray-800"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
                 ></path>
               </svg>
@@ -139,6 +137,12 @@ const HeaderIsland: React.FC = () => {
         nav {
           display: flex;
           align-items: center;
+          mask-image: linear-gradient(
+            to right,
+            transparent 10%,
+            black 50%,
+            transparent 90%
+          );
         }
       `}</style>
       <style jsx global>

@@ -2,7 +2,7 @@
   <h1 
     align="center"
     style="text-decoration:underline;text-decoration-style:dashed"
-  >TodoX</h1>
+  >SentenceX</h1>
   <a href="https://github.com/trpc/trpc/blob/main/LICENSE">
     <img alt="MIT License" src="https://img.shields.io/github/license/trpc/trpc" />
   </a>
@@ -58,7 +58,7 @@
 
 ## Implementation
 
-**TodoX** is built as a standard Next.js application with a customizable **[Middleware](https://nextjs.org/docs/advanced-features/middleware)**
+**SentenceX** is built as a standard Next.js application with a customizable **[Middleware](https://nextjs.org/docs/advanced-features/middleware)**
 
 **Passwordless authentication** using custom magic-links.
 

@@ -6,15 +6,17 @@ const Main = ({ children }: { children: React.ReactNode }) => {
       <main
         className={cn(
           "container relative overflow-hidden",
-          "h-[90%] w-full max-w-md md:h-[60%]",
-          "mx-auto my-auto mt-2 md:mt-10",
-          "px-10 pt-5",
-          "shadow-xl shadow-[#0001]",
+          "h-[calc(100%_-_8rem)] w-full",
+          "max-w-[42rem]",
+          "mx-auto my-auto",
+          // "mx-10 my-auto",
+          // "border-r border-cyan-400",
+          // "shadow-xl shadow-[#0001]",
         )}
       >
         {children}
       </main>
-      <style jsx>
+      {/* <style jsx>
         {`
           main::after {
             content: "";
@@ -26,7 +28,7 @@ const Main = ({ children }: { children: React.ReactNode }) => {
             padding: 1px;
             backdrop-filter: blur(5px);
             background: linear-gradient(
-              rgba(0, 0, 0, 0.7),
+              rgba(0, 0, 0, 0.01),
               rgba(255, 255, 255, 0.07)
             );
             mask-mode: match-source, match-source;
@@ -40,7 +42,7 @@ const Main = ({ children }: { children: React.ReactNode }) => {
             mask-composite: exclude;
           }
         `}
-      </style>
+      </style> */}
     </>
   );
 };

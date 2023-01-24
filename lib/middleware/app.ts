@@ -15,7 +15,7 @@ export default async function AppMiddleware(req: NextRequest) {
   ) {
     return NextResponse.redirect(new URL("/", req.url));
   } else if (session?.email && (path === "/login" || path === "/register")) {
-    return NextResponse.redirect(new URL("/todos", req.url));
+    return NextResponse.redirect(new URL("/sentences", req.url));
   }
   //   return NextResponse.rewrite(new URL(`/app${path}`, req.url));
   return NextResponse.next();

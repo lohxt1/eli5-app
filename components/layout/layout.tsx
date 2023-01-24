@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import { cn } from "@/utils/tailwind";
 import Background from "../shared/background";
+import HeaderBar from "./headerBar";
 import HeaderIsland from "./headerIsland";
 
 type Props = {
@@ -12,6 +13,7 @@ const Layout: React.FC<Props> = (props) => (
     <Background />
     <div className={cn("h-screen")}>
       <HeaderIsland />
+      <HeaderBar />
       {props.children}
     </div>
   </div>
