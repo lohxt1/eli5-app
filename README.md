@@ -2,7 +2,7 @@
   <h1 
     align="center"
     style="text-decoration:underline;text-decoration-style:dashed"
-  >SentenceX</h1>
+  >ELI5</h1>
   <a href="https://github.com/trpc/trpc/blob/main/LICENSE">
     <img alt="MIT License" src="https://img.shields.io/github/license/trpc/trpc" />
   </a>

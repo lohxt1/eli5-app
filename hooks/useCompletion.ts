@@ -21,7 +21,7 @@ type OutputTypeError = {
 
 type CompletionState = {
   text: string;
-  output: OutputTypeSuccess | OutputTypeError;
+  output: OutputTypeSuccess | OutputTypeError | null;
   isLoading: boolean;
 };
 

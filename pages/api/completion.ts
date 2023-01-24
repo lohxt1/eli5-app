@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { unstable_getServerSession } from "next-auth/next";
 import openai from "@/lib/openai";
-import animalAnalogyPrompt from "@/lib/promptPatterns/animalAnalogyPrompt";
 import { authOptions } from "./auth/[...nextauth]";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
@@ -37,7 +36,17 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     // create todo
     const sentence = JSON.parse(req.body);
 
-    const _prompt = `${animalAnalogyPrompt} ${sentence?.text}\nAnswer:\n^^^`;
+    const defaultPrompt = `Generate random answer for the below question.
+    Question:
+    `;
+
+    const prompt = await prisma.prompt.findUnique({
+      where: { id: `cld8dxjid0000vnyyq53of04m` },
+    });
+
+    const _prompt = `${prompt?.prompt || defaultPrompt} ${
+      sentence?.text
+    }\nAnswer:\n^^^`;
     const _result = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: _prompt,

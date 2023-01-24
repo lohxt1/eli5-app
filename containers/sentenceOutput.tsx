@@ -17,15 +17,13 @@ const SentenceOutput = () => {
     },
   );
 
-  console.log(output);
-
   return (
     <div className={cn("wrapper h-[80%] w-full overflow-scroll px-2")}>
       {isLoading || isListLoading ? (
         <div className="mb-10">
           <LoadingDots />
         </div>
-      ) : output.state == "error" ? (
+      ) : output?.state == "error" ? (
         <div className="mb-10 text-[#fa7]">{output?.error}</div>
       ) : null}
 
