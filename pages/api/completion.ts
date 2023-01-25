@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { unstable_getServerSession } from "next-auth/next";
 import openai from "@/lib/openai";
+import prisma from "@/lib/prisma";
 import { authOptions } from "./auth/[...nextauth]";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
