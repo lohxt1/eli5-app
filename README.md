@@ -2,7 +2,10 @@
 
 <h1>
 <p align="center">
-<img align="center" src="https://lohxt1.github.io/_assets/eli51.png" alt="ELI5-app"/><br/><img align="center" src="https://lohxt1.github.io/_assets/eli52.png" alt="ELI5-app"/><br/><br/>ELI5-app
+<img align="center" src="https://lohxt1.github.io/_assets/eli51.png" alt="ELI5-app"/>
+<!-- <br/> -->
+<!-- <img align="center" src="https://lohxt1.github.io/_assets/eli52.png" alt="ELI5-app"/> -->
+<br/><br/>ELI5-app
 </h1>
   <p align="center">
     [NextJS - Tailwind - Prisma] app for generating simplified explaination for any sort of complex text.
