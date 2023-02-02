@@ -33,8 +33,8 @@ To run the code locally, open _Terminal_ in your `projects` folder and take the 
 
 ```bash
 # STEP 1: Get sources from GitHub
-$ git clone https://github.com/lohxt1/pull-tweets.git
-$ cd pull-tweets
+$ git clone https://github.com/lohxt1/eli5-app.git
+$ cd eli5-app
 
 # STEP 2: Install the requirements
 $ npm install
