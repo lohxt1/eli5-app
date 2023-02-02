@@ -4,6 +4,7 @@ import NextAuth, { type NextAuthOptions } from "next-auth";
 import EmailProvider from "next-auth/providers/email";
 import GoogleProvider from "next-auth/providers/google";
 import prisma from "@/lib/prisma";
+import { isEmailValid } from "@/utils/helpers";
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -28,6 +29,12 @@ export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
+    signIn: async ({ user }) => {
+      // if (!isEmailValid(user.email)) {
+      //   return false;
+      // }
+      return true;
+    },
     session: async ({ session, token }) => {
       if (session?.user && token?.uid) {
         session.user.id = token.uid;
@@ -35,6 +42,9 @@ export const authOptions: NextAuthOptions = {
       return session;
     },
     jwt: async ({ user, token }) => {
+      // if (!isEmailValid(token.email)) {
+      //   return {};
+      // }
       if (user) {
         token.uid = user.id;
       }

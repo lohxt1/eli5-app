@@ -1,3 +1,5 @@
+import { WHITELISTED_EMAIL_DOMAINS } from "@/lib/constants";
+
 const formatter = new Intl.RelativeTimeFormat(undefined, {
   numeric: "auto",
 });
@@ -46,4 +48,7 @@ function formatTimeAgo(date) {
   }
 }
 
-export { formatTimeAgo };
+let isEmailValid = (x) =>
+  WHITELISTED_EMAIL_DOMAINS.some((y) => new RegExp(`@.*?(${y})`).test(x));
+
+export { formatTimeAgo, isEmailValid };

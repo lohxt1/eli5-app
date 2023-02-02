@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       className={cn(
         "flex flex-col",
         "container relative overflow-hidden",
-        "h-[calc(100%_-_6rem)] w-full",
+        "h-[calc(100%_-_8rem)] w-full",
         "max-w-[42rem]",
         "mx-auto my-auto",
       )}
@@ -28,6 +28,15 @@ const Home: NextPage = () => {
         )}
       >
         ELI5 app
+      </label>
+      <label
+        className={cn(
+          "w-fit text-center font-bold",
+          "text-[13px] text-cyan-800",
+          "mx-auto mb-2",
+        )}
+      >
+        (Explain like I'm Five)
       </label>
       <label
         className={cn(
